@@ -1,4 +1,4 @@
-FROM arm64v8/ubuntu:20.04
+FROM ubuntu:20.04
 MAINTAINER Mark mark@douwantech.com
 
 RUN apt-get update
@@ -23,15 +23,15 @@ RUN chmod 755 -R /usr/src/coreseek
 WORKDIR /usr/src/coreseek/mmseg-3.2.14
 RUN ./bootstrap
 RUN ./configure
-RUN make && make install
+RUN make -C src libmmseg.la -j $(nproc) && make && make install
 
 WORKDIR /usr/src/coreseek/csft-4.1
 RUN ./buildconf.sh
 RUN ./configure --without-unixodbc --with-mmseg --with-mysql
-RUN make && make install
+RUN make -j $(nproc) && make install
 RUN strip /usr/local/bin/*
 
-FROM arm64v8/ubuntu:20.04
+FROM ubuntu:20.04
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libmysqlclient-dev \
