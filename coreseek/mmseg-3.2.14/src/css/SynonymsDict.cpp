@@ -91,7 +91,7 @@ int SynonymsDict::import(const char* filename)
 	std::string line;
 	std::string lKey,rKey;
 	size_t offset = 1;
-	char txtHead[3] = {239,187,191};
+	unsigned char txtHead[3] = {239,187,191};
 	//load 
 	while (std::getline(*is, line)) {
 		//for each line.

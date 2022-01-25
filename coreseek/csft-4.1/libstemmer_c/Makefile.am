@@ -4,3 +4,4 @@ include $(srcdir)/mkinc.mak
 noinst_HEADERS = $(snowball_headers)
 libstemmer_a_SOURCES = $(snowball_sources)
 endif
+AUTOMAKE_OPTIONS = subdir-objects

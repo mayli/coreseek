@@ -2823,7 +2823,7 @@ ISphMatchSorter * sphCreateQueue ( const CSphQuery * pQuery, const CSphSchema & 
 		}
 	}
 
-#define LOC_CHECK(_cond,_msg) if (!(_cond)) { sError = "invalid schema: " _msg; return false; }
+#define LOC_CHECK(_cond,_msg) if (!(_cond)) { sError = "invalid schema: " _msg; return 0; }
 
 	int iGroupby = tSorterSchema.GetAttrIndex ( "@groupby" );
 	if ( iGroupby>=0 )

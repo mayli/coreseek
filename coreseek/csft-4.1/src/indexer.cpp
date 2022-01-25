@@ -755,7 +755,7 @@ CSphSource * SpawnSourceXMLPipe ( const CSphConfigSection & hSource, const char 
 {
 	assert ( hSource["type"]=="xmlpipe" || hSource["type"]=="xmlpipe2" );
 
-	LOC_CHECK ( hSource, "xmlpipe_command", "in source '%s'.", sSourceName );
+	// LOC_CHECK ( hSource, "xmlpipe_command", "in source '%s'.", sSourceName );
 
 	CSphSource * pSrcXML = NULL;
 

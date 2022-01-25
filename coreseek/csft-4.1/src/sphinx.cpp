@@ -3443,7 +3443,7 @@ BYTE * CSphTokenizerTraits<IS_UTF8>::GetBlendedVariant ()
 
 	// case 2, caller is checking for pending variants, have we even got any?
 	if ( !m_bBlendAdd )
-		return false;
+		return (BYTE *)false;
 
 	// handle trim_none
 	// this MUST be the first handler, so that we could avoid copying below, and just return the original accumulator

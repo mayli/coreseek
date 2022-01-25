@@ -11,6 +11,7 @@ SPHINX_CONFIGURE_PART([checking build environment])
 
 AC_CONFIG_AUX_DIR([config])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 AM_MAINTAINER_MODE
 AM_PATH_PYTHON
 AC_CONFIG_SRCDIR([src/searchd.cpp])

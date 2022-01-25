@@ -251,7 +251,7 @@ int segment(const char* file,Segmenter* seg)
 	u2 len = 0, symlen = 0;
 	u2 kwlen = 0, kwsymlen = 0;
 	//check 1st token.
-	char txtHead[3] = {239,187,191};
+	unsigned char txtHead[3] = {239,187,191};
 	char* tok = (char*)seg->peekToken(len, symlen);
 	seg->popToken(len);
 	if(seg->isSentenceEnd()){

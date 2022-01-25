@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/usr/local/bin/indexer --all > /var/sphinx/log/indexer.log
+/usr/local/bin/indexer --all
 
 echo "Starting Sphinx"
 /usr/local/bin/searchd --nodetach

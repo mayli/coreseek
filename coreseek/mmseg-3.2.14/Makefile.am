@@ -33,7 +33,7 @@ dictdir = $(prefix)/etc
 dist_dict_SCRIPTS = data/unigram.txt	data/uni.lib	data/mmseg.ini
 
 ## @end 1
-AUTOMAKE_OPTIONS 	= gnits
+AUTOMAKE_OPTIONS 	= gnits subdir-objects
 SUBDIRS 		= src 
 ## @start 1
 MAINTAINERCLEANFILES 	= Makefile.in aclocal.m4 configure config-h.in \
