@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM arm64v8/ubuntu:20.04
 MAINTAINER Mark mark@douwantech.com
 
 RUN apt-get update
@@ -31,7 +31,7 @@ RUN ./configure --without-unixodbc --with-mmseg --with-mysql
 RUN make && make install
 RUN strip /usr/local/bin/*
 
-FROM ubuntu:20.04
+FROM arm64v8/ubuntu:20.04
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libmysqlclient-dev \
