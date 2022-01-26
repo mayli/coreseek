@@ -41,7 +41,7 @@ COPY --from=0 /usr/local/bin /usr/local/bin
 COPY --from=0 /usr/local/etc /usr/local/etc
 ADD ./cron/sphinx /etc/cron.hourly/sphinx
 
-VOLUME ['/usr/local/etc/sphinx', '/var/log/sphinx']
+VOLUME ["/usr/local/etc/sphinx", "/var/log/sphinx"]
 
 RUN ln -s /usr/local/etc/sphinx/sphinx.conf /usr/local/etc/csft.conf
 RUN mkdir -p /var/sphinx/log/
