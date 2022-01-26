@@ -72,7 +72,8 @@ searchd
 
 ```
 
-docker run --name sphinx -v /root/sphinx/sphinx:/usr/local/etc/sphinx -p 9312:9312 -i registry.cn-hangzhou.aliyuncs.com/ror/coreseek:latest
+docker run --name sphinx -v /root/sphinx/sphinx:/usr/local/etc/sphinx -p 9312:9312 -i mayli/coreseek
 
 ```
+
 
